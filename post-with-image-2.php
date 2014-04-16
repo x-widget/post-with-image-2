@@ -10,6 +10,9 @@
 	} 
 	if ( empty($posts_full_image) ) $posts_image_2[] = array( 'url' => bo_table(1) );
 	
+	$height = 360;
+	$width = 170;
+	
 ?>
 <div class='post-with-image-2-title'><?=$widget_config['title']?></div>
 <div class='post-with-image-2-container'>
@@ -54,12 +57,12 @@
 	if ( $list ) {
 	$post_number = 1;
 	foreach ( $list as $post ) {
-		$imgsrc = get_list_thumbnail($forum['url'], $post['wr_id'], $widget_config['width'], $widget_config['height']);
+		$imgsrc = get_list_thumbnail($forum['url'], $post['wr_id'], $width, $height);
 		if ( $imgsrc['src'] ) {
 			$img = $imgsrc['src'];
-		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $post['wr_content'], $forum['url'], $widget_config['width'], $widget_config['height'] )) {
+		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $post['wr_content'], $forum['url'], $width, $height )) {
 			$img = $image_from_tag;
-		} else $img = g::thumbnail_from_image_tag("<img src='".x::url()."/widget/$widget_config[name]/no-image.png'/>", $forum['url'], $widget_config['width'], $widget_config['height']);
+		} else $img = g::thumbnail_from_image_tag("<img src='".x::url()."/widget/$widget_config[name]/no-image.png'/>", $forum['url'], $width, $height);
 		?>
 		<div class='gallery4-with-image-2 post_<?=$post_number++?>'>
 			<? if ( $post ) {
