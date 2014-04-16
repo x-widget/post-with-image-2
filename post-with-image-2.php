@@ -111,3 +111,7 @@
 	</div>	
 	<? } ?>
 </div>
+
+<style>
+<?=$widget_config['css']?>
+</style>
