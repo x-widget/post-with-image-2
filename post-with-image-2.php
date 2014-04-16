@@ -4,12 +4,12 @@
 
 	for ( $forum_ctr = 1; $forum_ctr <=9; $forum_ctr++ ) {
 		$menu = $widget_config['forum'.$forum_ctr];
+		if ( empty($menu) ) continue;
 		$menu_name = $widget_config['post-with-image-2-menu-name'.$forum_ctr];
 		if ( empty($menu_name) ) $menu_name = $menu;
 		$posts_image_2[] = array( 'url' => $menu, 'name' => $menu_name  );
 	} 
-	if ( empty($posts_full_image) ) $posts_image_2[] = array( 'url' => bo_table(1) );
-	
+	if ( empty($posts_image_2) ) $posts_image_2[] = array( 'url' => bo_table(1) , 'name'	=> 'forum 1' );
 	$height = 360;
 	$width = 170;
 	
