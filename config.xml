@@ -1,24 +1,32 @@
 <?xml version="1.0"?>
 <config>
+	<id>post-with-image-2</id>
+	<type>widget</type>
 	<category>
-		<main>post</main>
-		<sub>latest</sub>
+		<main>Post</main>
+		<sub>Latest</sub>
 	</category>
 	<name>
 		<en>Post with Image 2</en>
-		<ko>최근 글 (사진포함)</ko>
+		<ko>최근글</ko>
 	</name>
-	<version>0.2</version>
-	<author>x-team</author>
-	<email>withcenter</email>
-	<homepage>http://www.philgo.net</homepage>
+	<version>0.1</version>
+	<author>x/theme</author>
+	<email>philgo.net</email>
+	<homepage>philgo.net</homepage>
 	<demo>http://philgo.net</demo>
 	<short>
-		<en>Displays latest posts</en>
-		<ko>최근코멘트를 표시합니다.</ko>
+		<en>Displays latest posts with a large thumbnail, category style</en>
+		<ko>최근글을 표시합니다.</ko>
 	</short>
 	<detail>
-		<en>displays latest post with an image</en>
-		<ko>최근 코멘트를 표시합니다.</ko>
+		<en>Display latest post with Large Thumbnail, category style</en>
+		<ko>
+		
+			옵션 설정에 따라서 여러가지 형태로 최근글을 표시합니다.
+			여러개의 게시판을 선택 하여 그 게시판의 글들만 나오게 할 수 있습니다.
+			클릭 URL 값이 지정되지 않았다면 클릭시, 선택된 게시판 중 첫 게시판으로 이동합니다.
+			
+		</ko>
 	</detail>
 </config>
