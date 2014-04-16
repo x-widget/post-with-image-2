@@ -147,6 +147,10 @@
 	width: 100%;
 }
 
+.post-with-image-2-container .image2-menu-wrapper {
+	background: #ffb848;
+}
+
 @media (max-width: 970px) {
 	.gallery4-with-image-2 {
 		width: 33.33%;
