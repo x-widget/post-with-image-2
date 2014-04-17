@@ -66,7 +66,7 @@
 		?>
 		<div class='gallery4-with-image-2 post_<?=$post_number++?>'>
 			<? if ( $post ) {
-					$url = g::url()."/bbs/board.php?bo_table=$forum[url]";
+					$url = g::url()."/bbs/board.php?bo_table=$forum[url]&wr_id=$post[wr_id]";
 					$subject = cut_str($post['wr_subject'],15,'');
 					$content = cut_str(strip_tags($post['wr_content']), 100,'');
 			}
