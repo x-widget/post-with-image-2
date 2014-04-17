@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config>
-	<id>post-with-image-2</id>
+	<id>widget post-with-image-2</id>
 	<type>widget</type>
 	<category>
-		<main>Post</main>
-		<sub>Latest</sub>
+		<main>post</main>
+		<sub>latest</sub>
 	</category>
 	<name>
 		<en>Post with Image 2</en>
