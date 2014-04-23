@@ -22,7 +22,7 @@
 	?>
 	<div class='image2-menu-wrapper'>
 	
-		<div class='image-2-previous'><img src="<?=x::theme_url('img/image2_left_arrow.png')?>"/></div>
+		<div class='image-2-previous'><img src="<?=$widget_config['url']?>/image2_left_arrow.png"/></div>
 	
 		<div class='image-2-menu'><?
 			foreach ( $posts_image_2 as $menu ) { ?> 
@@ -36,7 +36,7 @@
 			<div style='clear: left'></div>
 		</div>
 		
-		<div class='image-2-next'><img src="<?=x::theme_url('img/image2_right_arrow.png')?>"/></div>
+		<div class='image-2-next'><img src="<?=$widget_config['url']?>/image2_right_arrow.png"/></div>
 		<div style='clear: left'></div>
 		
 	</div>
