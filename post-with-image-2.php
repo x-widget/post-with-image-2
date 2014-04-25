@@ -115,3 +115,11 @@
 <style>
 <?=$widget_config['css']?>
 </style>
+
+<? if ( etc::old_ie() ) { ?>
+	<style>
+		.post-with-image-2-container .image2-menu-name {	
+			width: 11%;
+		}
+	</style>
+<? } ?>
