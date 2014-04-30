@@ -22,21 +22,21 @@
 	?>
 	<div class='image2-menu-wrapper'>
 	
-		<div class='image-2-previous'><img src="<?=$widget_config['url']?>/image2_left_arrow.png"/></div>
+		<div class='image-2-previous'><img src="<?=$widget_config['url']?>/img/image2_left_arrow.png"/></div>
 	
 		<div class='image-2-menu'><?
 			foreach ( $posts_image_2 as $menu ) { ?> 
 				<span class='image2-menu-name <? if ( $i++ == 0 ) echo "selected first-menu"?>' menu2_name="<?=$menu['url']?>">
 					<span class='inner'>
-						<img src="<?=x::theme_url('img/category_'.$i.'.png')?>" class='not-active-background'/>
-						<img src="<?=x::theme_url('img/category_'.$i.'b.png')?>" class='active-background'/>
+						<img src="<?=$widget_config['url'].'/img/category_'.$i.'.png'?>" class='not-active-background'/>
+						<img src="<?=$widget_config['url'].'/img/category_'.$i.'b.png'?>" class='active-background'/>
 						<div class='menu2_name'><?=$menu['name']?></div>
 					</span>
 				</span> <? } ?>
 			<div style='clear: left'></div>
 		</div>
 		
-		<div class='image-2-next'><img src="<?=$widget_config['url']?>/image2_right_arrow.png"/></div>
+		<div class='image-2-next'><img src="<?=$widget_config['url']?>/img/image2_right_arrow.png"/></div>
 		<div style='clear: left'></div>
 		
 	</div>
@@ -44,11 +44,6 @@
 	foreach ( $posts_image_2 as $forum ) {
 		$list = db::rows("SELECT * FROM $g5[write_prefix]$forum[url] WHERE wr_is_comment = 0 ORDER BY wr_num LIMIT 0, 10 ");
 		$bo_subject = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$forum[url]'");
-		/** Temporarily used direct query instead of g::posts,
-			because this widget requires the non-stripped
-			wr_content to make use of g::thumbnail_from_image_tag
-			$list= g::posts( array('limit' => 10, 'select' => 'wr_content, wr_id, wr_subject', 'bo_table' => $forum['url']) );
-		*/
 	?>
 	<div class='post-with-image-2 <?=$forum['url']?> <? if ( $i++ == 0 ) echo "selected"?>'>
 	<div class='gallery_with_image_2'>
@@ -62,7 +57,7 @@
 			$img = $imgsrc['src'];
 		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $post['wr_content'], $forum['url'], $width, $height )) {
 			$img = $image_from_tag;
-		} else $img = g::thumbnail_from_image_tag("<img src='".x::url()."/widget/$widget_config[name]/no-image.png'/>", $forum['url'], $width, $height);
+		} else $img = g::thumbnail_from_image_tag("<img src='".x::url()."/widget/$widget_config[name]/img/no-image.png'/>", $forum['url'], $width, $height);
 		?>
 		<div class='gallery4-with-image-2 post_<?=$post_number++?>'>
 			<? if ( $post ) {
@@ -93,7 +88,7 @@
 	} else {
 		echo "
 				<div class='no_post'>
-					<img src='".x::url()."/widget/$widget_config[name]/no_image_banner.png' />
+					<img src='".x::url()."/widget/$widget_config[name]/img/no_image_banner.png' />
 				</div>
 			";
 	}	
